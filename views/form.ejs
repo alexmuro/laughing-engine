@@ -1,0 +1,61 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+          <div>
+              <p><strong>User Name</strong>: <%= user.userName %></p>
+              <p><strong>Email</strong>: <%= user.email %></p>
+              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          </div>
+      </div>
+  </div>
+
+
+    <div class="page-header text-center">
+        
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <a href="/favorites" class="btn btn-default btn-sm">Favorites</a>
+    </div>
+
+    <div class="row">
+        <h1 class="text-center">WORKOUT GENERATOR</h1>
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-12"> 
+            <form action="/form" method="post">
+              <p>enter your weight <input name="weight" placeholder="weight in lbs" type="number" value=""></p>
+              <p>enter your height <input name="feet" placeholder="feet" type="number" value=""><input name="inches" placeholder="inches" type="number" value=""></p>
+              <p>what do you want to focus on  
+                <input type="radio" id="hypertrophy" name="focus" value="hypertrophy">
+                <label for="hypertrophy">hypertrophy</label>
+                <input type="radio" id="strength_training" name="focus" value="strength_training">
+                <label for="strength_training">strength training</label>
+                <input type="radio" id="weight_loss" name="focus" value="weight_loss">
+                <label for="weight_loss">weight loss</label>
+              </p>
+              <p>how many days a week<input name="days" placeholder="how many days" type="number" value=""></p>
+              <p>choose a difficulty  
+                <input type="radio" id="beginner" name="level" value="beginner">
+                <label for="beginner">beginner</label>
+                <input type="radio" id="intermediate" name="level" value="intermediate">
+                <label for="intermediate">intermediate</label>
+                <input type="radio" id="advance" name="level" value="advance">
+                <label for="advance">advance</label>
+              </p>
+              <p>add your goal <input name="goal" placeholder="i.e gain 8 lbs of muscle" type="text" value=""></p>
+
+              
+              <button type="submit">GENERATE</button>
+            </form>
+
+        </div>
+
+
+        <div class="col col-sm-5">
+          <img src="">
+        </div>
+        <div class="col col-sm-7">
+
+        </div>
+        
+</div>
+<%- include('partials/footer') -%>
